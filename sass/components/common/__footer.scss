@@ -1,0 +1,154 @@
+//************************
+// FOOTER
+//************************
+
+.page-footer {
+  background-color: map-get($colors, 'contrast-background-color');
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__logo--indent-botom {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  &__logo--accent-part {
+    color: map-get($colors, 'third-decor-color');
+  }
+  &__contacts {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+//************************
+// FOOTER - Accommodation
+//************************
+.accommodation {
+  font-style: normal;
+  &__item--indent-bottom:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.71;
+    transition: color map-get($transition-parameters, 'transition-duration')
+      map-get($transition-parameters, 'cubic-bezier');
+  }
+  &__link--street-accent {
+    color: map-get($colors, 'third-decor-color');
+  }
+  &__link:hover,
+  &__link:focus {
+    color: map-get($colors, 'main-decor-color');
+  }
+}
+
+//************************
+// FOOTER - Social
+//************************
+
+.footer-socials {
+  margin-left: 70px;
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+  }
+  &__link {
+    display: block;
+    padding: 12px;
+    border-radius: 50%;
+    line-height: 0;
+    color: map-get($colors, 'third-decor-color');
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color
+      map-get($transition-parameters, 'transition-duration')
+      map-get($transition-parameters, 'cubic-bezier');
+    &:hover,
+    &:focus {
+      background-color: map-get($colors, 'main-decor-color');
+    }
+  }
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+//************************
+// FOOTER - Subscription form
+//************************
+
+.subscription {
+  &--indent-left {
+    margin-left: auto;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: map-get($colors, 'third-decor-color');
+    margin-bottom: 20px;
+  }
+}
+
+.form-subscribe {
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+  &__input {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    background-color: transparent;
+  }
+  &__input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &__btn {
+    display: flex;
+    padding: 10px 28px;
+    letter-spacing: 0.06em;
+    color: map-get($colors, 'third-decor-color');
+    background: map-get($colors, 'main-decor-color');
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color
+      map-get($transition-parameters, 'transition-duration')
+      map-get($transition-parameters, 'cubic-bezier');
+    &:hover,
+    &:focus {
+      background-color: map-get($colors, 'secondary-decor-color');
+    }
+  }
+  &__icon-send {
+    fill: currentColor;
+    margin-left: 10px;
+  }
+}
+
+// / .form-subscribe__btn::after {
+//   content: '';
+//   display: inline-block;
+//   width: 24px;
+//   height: 24px;
+//   margin-left: 10px;
+//   background-image: url("../images/icon_send.png");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }

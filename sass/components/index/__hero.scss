@@ -1,0 +1,54 @@
+//************************
+// HERO
+//************************
+
+.hero {
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  &--position {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  &__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: map-get($colors, 'third-decor-color');
+    &--position {
+      max-width: 696px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+    }
+  }
+  &__btn-make-order {
+    padding: 10px 32px;
+    color: map-get($colors, 'third-decor-color');
+    background-color: map-get($colors, 'main-decor-color');
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: box-shadow
+        map-get($transition-parameters, 'transition-duration')
+        map-get($transition-parameters, 'cubic-bezier'),
+      background-color map-get($transition-parameters, 'transition-duration')
+        map-get($transition-parameters, 'cubic-bezier');
+    &:hover,
+    &:focus {
+      background-color: map-get($colors, 'secondary-decor-color');
+    }
+  }
+}

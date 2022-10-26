@@ -1,0 +1,60 @@
+//************************
+// TEAM
+//************************
+.section--team-bg {
+  background-color: map-get($colors, 'background-color');
+}
+
+.team {
+  display: flex;
+  column-gap: 30px;
+  &__card {
+    background-color: map-get($colors, 'third-decor-color');
+    text-align: center;
+  }
+  &__details-wrapper {
+    padding: 30px 0;
+    padding-bottom: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__member-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    margin-bottom: 10px;
+    color: map-get($colors, 'secondary-text-color');
+  }
+  &__member-position {
+    font-size: 16px;
+    line-height: 1.18;
+    margin-bottom: 16px;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  &__link {
+    // remove additional height of line-height
+    line-height: 0;
+    display: block;
+    padding: 12px;
+    border-radius: 50%;
+    color: map-get($colors, 'icon-main-color');
+    transition: color map-get($transition-parameters, 'transition-duration')
+        map-get($transition-parameters, 'cubic-bezier'),
+      background-color map-get($transition-parameters, 'transition-duration')
+        map-get($transition-parameters, 'cubic-bezier');
+    &:hover,
+    &:focus {
+      color: map-get($colors, 'third-decor-color');
+      background-color: map-get($colors, 'main-decor-color');
+    }
+  }
+  &__icon {
+    fill: currentColor;
+  }
+}

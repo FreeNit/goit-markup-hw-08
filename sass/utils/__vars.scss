@@ -1,0 +1,44 @@
+// COLOR PALETTE
+$colors: (
+  'primary-text-color': #757575,
+  'secondary-text-color': #212121,
+
+  'background-color': #f5f4fa,
+  'contrast-background-color': #2f303a,
+
+  'main-decor-color': #2196f3,
+  'secondary-decor-color': #188ce8,
+  'third-decor-color': #ffffff,
+
+  'logo-secondary-color': #000000,
+
+  'border-color': #eeeeee,
+
+  'icon-main-color': #afb1b8,
+);
+
+$transition-parameters: (
+  'transition-duration': 250ms,
+  'cubic-bezier': cubic-bezier(0.4, 0, 0.2, 1),
+);
+
+// :root {
+//   --primary-text-color: #757575;
+//   --secondary-text-color: #212121;
+
+//   --background-color: #f5f4fa;
+//   --contrast-background-color: #2f303a;
+
+//   --main-decor-color: #2196f3;
+//   --secondary-decor-color: #188ce8;
+//   --third-decor-color: #ffffff;
+
+//   --logo-secondary-color: #000000;
+
+//   --border-color: #eeeeee;
+
+//   --icon-main-color: #afb1b8;
+
+//   --transition-duration: 250ms;
+//   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+// }

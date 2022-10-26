@@ -1,0 +1,32 @@
+//************************
+// CLIENTS
+//************************
+
+.partners {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid map-get($colors, 'icon-main-color');
+    border-radius: 4px;
+    line-height: 0;
+    color: map-get($colors, 'icon-main-color');
+    transition: color map-get($transition-parameters, 'transition-duration')
+        map-get($transition-parameters, 'cubic-bezier'),
+      border-color map-get($transition-parameters, 'transition-duration')
+        map-get($transition-parameters, 'cubic-bezier');
+    &:hover,
+    &:focus {
+      border-color: map-get($colors, 'main-decor-color');
+      color: map-get($colors, 'main-decor-color');
+    }
+  }
+  &__logo {
+    fill: currentColor;
+  }
+}
