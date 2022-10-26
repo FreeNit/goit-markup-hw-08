@@ -3,8 +3,26 @@
 //************************
 
 .advantages {
-  display: flex;
-  column-gap: 30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    &__item {
+      flex-basis: calc(100% / 2 - 30px);
+
+      &:not(:last-child) {
+        @media screen and (max-width: 767px) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    column-gap: 30px;
+  }
+
   &__title {
     font-weight: 700;
     font-size: 14px;
@@ -24,8 +42,17 @@
 }
 
 .icon-wrapper {
-  height: 120px;
-  padding: 25px 100px;
-  margin-bottom: 30px;
+  text-align: center;
+  padding: 25px 190px;
   background-color: map-get($colors, 'background-color');
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  @media screen and (min-width: 768px) {
+    padding: 25px 142px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 25px 100px;
+  }
 }

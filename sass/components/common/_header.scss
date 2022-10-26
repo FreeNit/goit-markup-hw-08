@@ -1,0 +1,106 @@
+//************************
+// HEADER
+//************************
+
+.page-header {
+  &--border-bottom {
+    border-bottom: 1px solid #ececec;
+  }
+  // &__content--position {
+  //   display: flex;
+  //   align-items: center;
+  // }
+}
+
+.logo {
+  &--indent-right {
+    margin-right: 93px;
+  }
+  &__part--accent {
+    color: map-get($colors, 'logo-secondary-color');
+  }
+}
+
+//************************
+// HEADER - Site Navigation
+//************************
+
+// .navigation {
+//   &__list--position {
+//     display: flex;
+//     column-gap: 50px;
+//   }
+// }
+
+// .navigation__link {
+//   display: flex;
+//   align-items: center;
+//   padding-top: 32px;
+//   padding-bottom: 32px;
+//   color: map-get($colors, 'secondary-text-color');
+//   position: relative;
+//   letter-spacing: 0.02em;
+//   font-weight: 500;
+//   transition: color,
+//     map-get($transition-parameters, 'transition-duration')
+//       map-get($transition-parameters, 'cubic-bezier');
+
+//   &--active {
+//     color: map-get($colors, 'main-decor-color');
+//   }
+//   &:hover,
+//   &:focus {
+//     color: map-get($colors, 'main-decor-color');
+//   }
+//   &--active::after {
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     bottom: -1px;
+
+//     height: 4px;
+//     width: 100%;
+//     border-radius: 2px;
+
+//     background-color: map-get($colors, 'main-decor-color');
+//   }
+// }
+
+//************************
+// HEADER - Contact Us
+//************************
+
+// .contact-us {
+//   list-style: none;
+//   display: flex;
+//   column-gap: 50px;
+//   margin-left: auto;
+//   align-items: center;
+//   &__link {
+//     display: flex;
+//     align-items: center;
+//     font-weight: 500;
+//     padding-top: 32px;
+//     padding-bottom: 32px;
+//     color: var(--primary-text-color);
+//     line-height: 1.14;
+//     &:hover,
+//     &:focus {
+//       color: map-get($colors, 'main-decor-color');
+//     }
+//   }
+//   &__icon {
+//     fill: currentColor;
+//   }
+//   &__icon--indent-right {
+//     margin-right: 10px;
+//   }
+//   &__icon--mail {
+//     width: 16px;
+//     height: 12px;
+//   }
+//   &__icon--phone-book {
+//     width: 10px;
+//     height: 16px;
+//   }
+// }

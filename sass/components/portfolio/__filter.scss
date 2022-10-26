@@ -2,35 +2,35 @@
 // FILTER
 //************************
 
-.filter {
-  display: flex;
-  justify-content: center;
-  column-gap: 8px;
-  margin-bottom: 50px;
-  &__btn {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    letter-spacing: 0.03em;
-    color: map-get($colors, 'secondary-text-color');
-    background-color: map-get($colors, 'background-color');
-    padding: 6px 22px;
-    transition: background-color
-        map-get($transition-parameters, 'transition-duration')
-        map-get($transition-parameters, 'cubic-bezier'),
-      color map-get($transition-parameters, 'transition-duration')
-        map-get($transition-parameters, 'cubic-bezier'),
-      box-shadow map-get($transition-parameters, 'transition-duration')
-        map-get($transition-parameters, 'cubic-bezier');
-    &--all-selection {
-      padding: 6px 25px;
-    }
-    &:hover,
-    &:focus {
-      background-color: map-get($colors, 'main-decor-color');
-      color: map-get($colors, 'third-decor-color');
-      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    }
-  }
-}
+// .filter {
+//   display: flex;
+//   justify-content: center;
+//   column-gap: 8px;
+//   margin-bottom: 50px;
+//   &__btn {
+//     font-weight: 500;
+//     font-size: 16px;
+//     line-height: 1.62;
+//     letter-spacing: 0.03em;
+//     color: map-get($colors, 'secondary-text-color');
+//     background-color: map-get($colors, 'background-color');
+//     padding: 6px 22px;
+//     transition: background-color
+//         map-get($transition-parameters, 'transition-duration')
+//         map-get($transition-parameters, 'cubic-bezier'),
+//       color map-get($transition-parameters, 'transition-duration')
+//         map-get($transition-parameters, 'cubic-bezier'),
+//       box-shadow map-get($transition-parameters, 'transition-duration')
+//         map-get($transition-parameters, 'cubic-bezier');
+//     &--all-selection {
+//       padding: 6px 25px;
+//     }
+//     &:hover,
+//     &:focus {
+//       background-color: map-get($colors, 'main-decor-color');
+//       color: map-get($colors, 'third-decor-color');
+//       box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+//         0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+//     }
+//   }
+// }
