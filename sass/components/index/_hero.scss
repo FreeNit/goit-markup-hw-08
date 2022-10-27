@@ -13,12 +13,14 @@
   background-position: center;
   background-size: cover;
   text-align: center;
+
   &--position {
     max-width: 1600px;
     margin: 0 auto;
     padding-top: 200px;
     padding-bottom: 200px;
   }
+
   &__title {
     font-weight: 900;
     font-size: 26px;
@@ -34,14 +36,10 @@
       margin-right: auto;
       margin-bottom: 30px;
     }
-    //MEDIA 1200px
+
     @media screen and (min-width: 1200px) {
       font-size: 44px;
       line-height: 1.36;
-      text-align: center;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: map-get($colors, 'third-decor-color');
 
       &--position {
         max-width: 696px;
@@ -49,6 +47,9 @@
     }
   }
   &__btn-make-order {
+    @media screen and (min-width: 1200px) {
+      padding: 10px 32px;
+    }
     padding: 10px 24px;
     color: map-get($colors, 'third-decor-color');
     background-color: map-get($colors, 'main-decor-color');
@@ -63,10 +64,6 @@
     &:hover,
     &:focus {
       background-color: map-get($colors, 'secondary-decor-color');
-      // MEDIA 1200px
-      @media screen and (min-width: 1200px) {
-        padding: 10px 32px;
-      }
     }
   }
 }
