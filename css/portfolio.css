@@ -40,6 +40,10 @@ body {
   margin: 0;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -135,11 +139,11 @@ a {
   cursor: pointer;
 }
 
-.page-header {
-  position: relative;
-}
 .page-header--border-bottom {
   border-bottom: 1px solid #ececec;
+}
+.page-header__content--position {
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .page-header__content--position {
@@ -154,12 +158,12 @@ a {
 @media screen and (max-width: 767px) {
   .page-header__wrapper {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 40px;
     left: 0;
     width: 100%;
-    padding: 40px;
-    background-color: #ccc;
+    padding-left: 40px;
+    background-color: #ffffff;
   }
   .page-header__wrapper.is-open {
     display: block;
@@ -248,9 +252,21 @@ a {
   color: #000000;
 }
 
+.logo.is-logoVisible {
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
 @media screen and (max-width: 767px) {
   .navigation {
-    margin-top: 48px;
     margin-bottom: 302px;
   }
 }
@@ -344,6 +360,11 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-us__item:not(:last-child) {
+    margin-bottom: 32px;
   }
 }
 .contact-us__link {
