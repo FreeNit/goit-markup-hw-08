@@ -3,18 +3,108 @@
 //************************
 
 .page-header {
+  position: relative;
   &--border-bottom {
     border-bottom: 1px solid #ececec;
   }
+
   &__content--position {
+    @media screen and (max-width: 767px) {
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__wrapper {
+    @media screen and (max-width: 767px) {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 40px;
+      background-color: #ccc;
+
+      &.is-open {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    }
+  }
+}
+
+.mobile-header {
+  @media screen and (max-width: 767px) {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// OPEN - CLOSE button for mobile resolution
+.menu-button {
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: map-get($colors, 'secondary-text-color');
+    transition: color map-get($transition-parameters, 'transition-duration')
+      map-get($transition-parameters, 'cubic-bezier');
+
+    &:hover,
+    &:focus {
+      color: map-get($colors, 'main-decor-color');
+    }
+  }
+
+  &__icon {
+    @media screen and (max-width: 767px) {
+      fill: currentColor;
+    }
+  }
+
+  &__icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
   }
 }
 
 .logo {
+  display: inline-block;
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
   &--indent-right {
-    margin-right: 93px;
+    @media screen and (min-width: 768px) {
+      margin-right: 87px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
   }
   &__part--accent {
     color: map-get($colors, 'logo-secondary-color');
@@ -26,21 +116,38 @@
 //************************
 
 .navigation {
+  @media screen and (max-width: 767px) {
+    margin-top: 48px;
+    margin-bottom: 302px;
+  }
   &__list--position {
-    display: flex;
-    column-gap: 50px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      column-gap: 50px;
+    }
   }
 }
 
 .navigation__link {
-  display: flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: block;
+
+  @media screen and (max-width: 767px) {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    margin-bottom: 35px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+  }
+
   color: map-get($colors, 'secondary-text-color');
-  position: relative;
-  letter-spacing: 0.02em;
-  font-weight: 500;
   transition: color,
     map-get($transition-parameters, 'transition-duration')
       map-get($transition-parameters, 'cubic-bezier');
@@ -48,21 +155,25 @@
   &--active {
     color: map-get($colors, 'main-decor-color');
   }
+
   &:hover,
   &:focus {
     color: map-get($colors, 'main-decor-color');
   }
+
   &--active::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -1px;
+    @media screen and (min-width: 768px) {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -1px;
 
-    height: 4px;
-    width: 100%;
-    border-radius: 2px;
+      height: 4px;
+      width: 100%;
+      border-radius: 2px;
 
-    background-color: map-get($colors, 'main-decor-color');
+      background-color: map-get($colors, 'main-decor-color');
+    }
   }
 }
 
@@ -71,6 +182,9 @@
 //************************
 
 .contact-us {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 64px;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     gap: 10px;
@@ -87,6 +201,13 @@
   align-items: center;
 
   &__link {
+    @media screen and (max-width: 767px) {
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 1.18;
+      letter-spacing: 0.02em;
+    }
+
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -108,14 +229,56 @@
     fill: currentColor;
   }
   &__icon--indent-right {
-    margin-right: 10px;
+    @media screen and (min-width: 768px) {
+      margin-right: 10px;
+    }
   }
-  &__icon--mail {
-    width: 16px;
-    height: 12px;
-  }
+  &__icon--mail,
   &__icon--phone-book {
-    width: 10px;
-    height: 16px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__icon--mail {
+    @media screen and (min-width: 467px) {
+      width: 16px;
+      height: 12px;
+    }
+  }
+
+  &__icon--phone-book {
+    @media screen and (min-width: 467px) {
+      width: 10px;
+      height: 16px;
+    }
+  }
+}
+
+//************************
+// HEADER - Exportable Socials
+//************************
+.exportable-socials {
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    margin-bottom: 48px;
+
+    &__link {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+      padding: 0 10px;
+
+      &:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+      }
+
+      &:hover,
+      &:focus {
+        color: map-get($colors, 'main-decor-color');
+      }
+    }
   }
 }
