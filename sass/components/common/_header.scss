@@ -41,8 +41,8 @@
   }
 }
 
-// OPEN - CLOSE button for mobile resolution
-.menu-button {
+// OPEN button for mobile resolution
+.menu-button-toggle {
   display: none;
 
   @media screen and (max-width: 767px) {

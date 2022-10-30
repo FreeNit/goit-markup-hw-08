@@ -1,0 +1,29 @@
+//************************
+// MOBILE MENU
+//************************
+
+.mobile-menu-button-toggle {
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: map-get($colors, 'secondary-text-color');
+    transition: color map-get($transition-parameters, 'transition-duration')
+      map-get($transition-parameters, 'cubic-bezier');
+
+    &:hover,
+    &:focus {
+      color: map-get($colors, 'main-decor-color');
+    }
+  }
+
+  &__icon {
+    @media screen and (max-width: 767px) {
+      fill: currentColor;
+    }
+  }
+}
