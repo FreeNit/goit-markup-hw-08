@@ -2,7 +2,30 @@
 // MOBILE MENU
 //************************
 
-.mobile-menu-button-toggle {
+.mobile-menu-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 48px 83px 48px 40px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  transform: translateX(100%);
+  transition: transform map-get($transition-parameters, 'transition-duration')
+    map-get($transition-parameters, 'cubic-bezier');
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+//************************
+// MOBILE MENU - btn close menu
+//************************
+.mobile-button-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
   display: none;
 
   @media screen and (max-width: 767px) {
@@ -25,5 +48,93 @@
     @media screen and (max-width: 767px) {
       fill: currentColor;
     }
+  }
+}
+
+//************************
+// MOBILE MENU - navigation
+//************************
+
+.mobile-navigation {
+  margin-bottom: 302px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 35px;
+  }
+  &__link {
+    color: map-get($colors, 'secondary-text-color');
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    &--active {
+      color: map-get($colors, 'main-decor-color');
+    }
+
+    &:hover,
+    &:focus {
+      color: map-get($colors, 'main-decor-color');
+    }
+  }
+}
+
+//************************
+// MOBILE MENU - contact us
+//************************
+.mobile-contact-us {
+  margin-bottom: 64px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__link {
+    color: map-get($colors, 'primary-text-color');
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+
+    &:hover,
+    &:focus {
+      color: map-get($colors, 'main-decor-color');
+    }
+
+    &--accent {
+      font-size: 34px;
+      line-height: 1.17;
+      color: map-get($colors, 'main-decor-color');
+    }
+  }
+}
+
+//************************
+// MOBILE MENU - our socials
+//************************
+
+.mobile-socials {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  &__link {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    color: map-get($colors, 'main-decor-color');
+    letter-spacing: 0.02em;
+    padding: 0 10px;
+  }
+
+  &__item:first-child &__link {
+    padding-left: 0px;
   }
 }
