@@ -35,6 +35,9 @@ img {
 }
 
 body {
+  @media screen and (max-width: 767px) {
+    padding-top: 64px;
+  }
   color: map-get($colors, 'primary-text-color');
   font-family: 'Roboto', sans-serif;
   font-size: 14px;

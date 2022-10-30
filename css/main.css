@@ -40,6 +40,11 @@ body {
   background-color: #ffffff;
   margin: 0;
 }
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 64px;
+  }
+}
 
 body.modal-open {
   overflow: hidden;
@@ -140,6 +145,18 @@ a {
   cursor: pointer;
 }
 
+@media screen and (max-width: 767px) {
+  .page-header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 899;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-color: #ffffff;
+  }
+}
 .page-header--border-bottom {
   border-bottom: 1px solid #ececec;
 }

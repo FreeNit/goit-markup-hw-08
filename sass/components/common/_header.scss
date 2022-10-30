@@ -3,12 +3,22 @@
 //************************
 
 .page-header {
+  @media screen and (max-width: 767px) {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 899;
+    transform: translateX(-50%);
+    background-color: map-get($colors, 'third-decor-color');
+  }
   &--border-bottom {
     border-bottom: 1px solid #ececec;
   }
 
   &__content--position {
     position: relative;
+
     @media screen and (max-width: 767px) {
     }
 
