@@ -93,7 +93,79 @@
           </ul>
         </div>
       </div>
+      <!-- Mobile Menu -->
+      <div
+        class="container mobile-menu-container js-menu-container"
+        id="mobile-menu"
+      >
+        <div class="container">
+          <button class="mobile-button-toggle js-close-menu">
+            <svg
+              width="40"
+              height="40"
+              class="mobile-button-toggle__icon"
+              aria-label="Mobile menu switcher"
+            >
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
 
+          <!-- Mobile - navigation -->
+          <ul class="list mobile-navigation">
+            <li class="mobile-navigation__item">
+              <a
+                class="mobile-navigation__link"
+                href="./index.html"
+                >Студія</a
+              >
+            </li>
+            <li class="mobile-navigation__item">
+              <a class="mobile-navigation__link mobile-navigation__link--active" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mobile-navigation__item">
+              <a class="mobile-navigation__link" href="#">Контакти</a>
+            </li>
+          </ul>
+
+          <!-- Mobile - contact us -->
+          <ul class="list mobile-contact-us">
+            <li class="mobile-contact-us__item">
+              <a
+                class="mobile-contact-us__link mobile-contact-us__link--accent"
+                href="tel:+380961111111"
+              >
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="mobile-contact-us__item">
+              <a
+                class="mobile-contact-us__link"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile - our socials -->
+          <ul class="list mobile-socials">
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="#">Instagram</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="#">Twitter</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="#">Facebook</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     <main>
       <section class="section">
         <div class="container">
@@ -427,5 +499,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
