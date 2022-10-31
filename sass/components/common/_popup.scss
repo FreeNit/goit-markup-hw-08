@@ -33,13 +33,16 @@
       map-get($transition-parameters, 'cubic-bezier'),
     opacity map-get($transition-parameters, 'transition-duration')
       map-get($transition-parameters, 'cubic-bezier');
+
   &--position {
     position: absolute;
     top: 50%;
     left: 50%;
 
     height: 609px;
-    width: 450px;
+    @media screen and (min-width: 480px) {
+      width: 450px;
+    }
     padding: 40px 40px;
     @media screen and (min-width: 1200px) {
       height: 581px;

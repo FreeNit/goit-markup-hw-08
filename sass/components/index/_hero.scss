@@ -3,7 +3,8 @@
 //************************
 
 .hero {
-  height: 400px;
+  max-width: 1600px;
+  min-height: 400px;
   background-color: #c4c4c4;
   background-image: linear-gradient(
       to right,
@@ -14,7 +15,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  text-align: center;
+  margin: 0 auto;
 
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -77,15 +78,15 @@
     }
   }
 
-  &--position {
-    max-width: 1600px;
+  &__thumb {
+    max-width: 360px;
     margin: 0 auto;
-    padding-top: 118px;
-    padding-bottom: 118px;
+    padding: 118px 0;
+    text-align: center;
 
     @media screen and (min-width: 1200px) {
-      padding-top: 200px;
-      padding-bottom: 200px;
+      padding: 200px 0;
+      max-width: 696px;
     }
   }
 
@@ -97,13 +98,7 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: map-get($colors, 'third-decor-color');
-
-    &--position {
-      max-width: 360px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 30px;
-    }
+    margin-bottom: 30px;
 
     @media screen and (min-width: 1200px) {
       font-size: 44px;
