@@ -19,7 +19,7 @@
     <header class="page-header page-header--border-bottom">
       <div class="container page-header__content--position">
         <div class="page-header__mobile-header">
-          <a href="./index.html" class="logo logo--indent-right"
+          <a href="./index.html" class="logo logo--indent-right logo--in-header"
             >Web<span class="logo__part--accent">Studio</span>
           </a>
 
@@ -246,12 +246,36 @@
           <ul class="list occupation">
             <li>
               <div class="occupation__thumb">
-                <img
-                  src="images/box_1.jpg"
-                  alt="розробка продукту"
-                  width="370"
-                  height="295"
-                />
+                <picture>
+                  <!-- Desktop WEBP + JPG -->
+                  <source
+                    srcset="
+                      ./images/desktop_1200/box1-1200-1x.webp  1x,
+                      ./images/desktop_1200/box1-1200-@2x.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/desktop_1200/box1-1200-1x.jpg  1x,
+                      ./images/desktop_1200/box1-1200-@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <!-- DEFAULT IMG -->
+                  <img
+                    src="./images/desktop_1200/box1-1200-1x.jpg"
+                    alt="розробка продукту"
+                    class="team__img"
+                    loading="lazy"
+                    width="370"
+                    height="295"
+                  />
+                </picture>
                 <h3 class="occupation__title occupation__title--position">
                   Десктопні додатки
                 </h3>
@@ -259,12 +283,36 @@
             </li>
             <li>
               <div class="occupation__thumb">
-                <img
-                  src="images/box_2.jpg"
-                  alt="мобільні рішення"
-                  width="370"
-                  height="295"
-                />
+                <picture>
+                  <!-- Desktop WEBP + JPG -->
+                  <source
+                    srcset="
+                      ./images/desktop_1200/box2-1200-1x.webp  1x,
+                      ./images/desktop_1200/box2-1200-@2x.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/desktop_1200/box2-1200-1x.jpg  1x,
+                      ./images/desktop_1200/box2-1200-@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <!-- DEFAULT IMG -->
+                  <img
+                    src="./images/desktop_1200/box2-1200-1x.jpg"
+                    alt="mobile solutions"
+                    class="team__img"
+                    loading="lazy"
+                    width="370"
+                    height="295"
+                  />
+                </picture>
                 <h3 class="occupation__title occupation__title--position">
                   Мобільні додатки
                 </h3>
@@ -272,12 +320,36 @@
             </li>
             <li>
               <div class="occupation__thumb">
-                <img
-                  src="images/box_3.jpg"
-                  alt="дизайн"
-                  width="370"
-                  height="295"
-                />
+                <picture>
+                  <!-- Desktop WEBP + JPG -->
+                  <source
+                    srcset="
+                      ./images/desktop_1200/box3-1200-1x.webp  1x,
+                      ./images/desktop_1200/box3-1200-@2x.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/desktop_1200/box3-1200-1x.jpg  1x,
+                      ./images/desktop_1200/box3-1200-@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <!-- DEFAULT IMG -->
+                  <img
+                    src="./images/desktop_1200/box3-1200-1x.jpg"
+                    alt="design"
+                    class="team__img"
+                    loading="lazy"
+                    width="370"
+                    height="295"
+                  />
+                </picture>
                 <h3 class="occupation__title occupation__title--position">
                   Дизайнерські рішення
                 </h3>
@@ -761,7 +833,7 @@
           <h2 class="section__title">Постійні клієнти</h2>
           <ul class="list partners">
             <!-- Partner 1 -->
-            <li>
+            <li class="partners__item">
               <a href="#" class="partners__link partners__link--position">
                 <svg class="partners__logo" width="106" height="60">
                   <use href="./images/sprite_optimized.svg#icon-logo-1"></use>
@@ -769,7 +841,7 @@
               </a>
             </li>
             <!-- Partner 2 -->
-            <li>
+            <li class="partners__item">
               <a href="#" class="partners__link partners__link--position">
                 <svg class="partners__logo" width="106" height="60">
                   <use href="./images/sprite_optimized.svg#icon-logo-2"></use>
@@ -777,7 +849,7 @@
               </a>
             </li>
             <!-- Partner 3 -->
-            <li>
+            <li class="partners__item">
               <a href="#" class="partners__link partners__link--position">
                 <svg class="partners__logo" width="106" height="60">
                   <use href="./images/sprite_optimized.svg#icon-logo-3"></use>
@@ -785,7 +857,7 @@
               </a>
             </li>
             <!-- Partner 4 -->
-            <li>
+            <li class="partners__item">
               <a href="#" class="partners__link partners__link--position">
                 <svg class="partners__logo" width="106" height="60">
                   <use href="./images/sprite_optimized.svg#icon-logo-4"></use>
@@ -793,7 +865,7 @@
               </a>
             </li>
             <!-- Partner 5 -->
-            <li>
+            <li class="partners__item">
               <a href="#" class="partners__link partners__link--position">
                 <svg class="partners__logo" width="106" height="60">
                   <use href="./images/sprite_optimized.svg#icon-logo-5"></use>
@@ -801,7 +873,7 @@
               </a>
             </li>
             <!-- Partner 6 -->
-            <li>
+            <li class="partners__item">
               <a href="#" class="partners__link partners__link--position">
                 <svg class="partners__logo" width="106" height="60">
                   <use href="./images/sprite_optimized.svg#icon-logo-6"></use>

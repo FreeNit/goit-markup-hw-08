@@ -1,9 +1,9 @@
 //************************
 // TEAM
 //************************
-// .section--team-bg {
-//   background-color: map-get($colors, 'background-color');
-// }
+.section--team-bg {
+  background-color: map-get($colors, 'background-color');
+}
 
 .team {
   @media screen and (min-width: 768px) {

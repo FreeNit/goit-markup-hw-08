@@ -79,8 +79,10 @@
 .logo {
   display: inline-block;
   @media screen and (max-width: 767px) {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    &--in-header {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
   }
 
   &--indent-right {

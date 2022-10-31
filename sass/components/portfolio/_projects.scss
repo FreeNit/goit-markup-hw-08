@@ -5,14 +5,12 @@
 .portfolio {
   @media screen and (min-width: 768px) {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
   }
 }
 
 .project {
-  border: 1px solid map-get($colors, 'border-color');
   &:not(:last-child) {
     @media screen and (max-width: 767px) {
       margin-bottom: 30px;
@@ -20,11 +18,11 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    flex-basis: calc(100% / 2 - 30px);
+    flex-basis: calc((100% - 30px) / 2);
   }
 
   @media screen and (min-width: 1200px) {
-    flex-basis: calc(100% / 3 - 33px);
+    flex-basis: calc((100% - 2 * 30px) / 3);
   }
 
   &__link {
@@ -69,7 +67,7 @@
     font-size: 18px;
     line-height: 1.55;
     color: map-get($colors, 'third-decor-color');
-    padding: 63px 24px;
+    padding: 49px 24px;
     overflow: auto;
     transform: translateY(100%);
     transition: transform map-get($transition-parameters, 'transition-duration')
@@ -84,6 +82,8 @@
 
   &__details {
     padding: 20px 24px;
+    border: 1px solid map-get($colors, 'border-color');
+    border-top: none;
   }
   &__title {
     font-weight: 700;

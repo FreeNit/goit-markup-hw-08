@@ -4,15 +4,13 @@
 
 .partners {
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 30px;
+  // justify-content: center;
+
   &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    height: 92px;
+    padding: 16px 51px;
+    display: inline-block;
     border: 1px solid map-get($colors, 'icon-main-color');
     border-radius: 4px;
     line-height: 0;
@@ -21,12 +19,22 @@
         map-get($transition-parameters, 'cubic-bezier'),
       border-color map-get($transition-parameters, 'transition-duration')
         map-get($transition-parameters, 'cubic-bezier');
+
     &:hover,
     &:focus {
       border-color: map-get($colors, 'main-decor-color');
       color: map-get($colors, 'main-decor-color');
     }
+
+    @media screen and (min-width: 768px) {
+      padding: 16px 58px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 16px 30px;
+    }
   }
+
   &__logo {
     fill: currentColor;
   }
