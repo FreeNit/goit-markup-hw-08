@@ -22,7 +22,7 @@
   &__thumb {
     position: relative;
     height: 100%;
-    padding: 120px 30px;
+    padding: 120px 15px;
 
     @media screen and (min-width: 480px) {
       padding: 48px;
@@ -149,11 +149,12 @@
 
 .mobile-socials {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 50px;
   display: flex;
 
   &__item:not(:last-child) {
-    margin-right: 10px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
 
