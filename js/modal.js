@@ -10,5 +10,12 @@
 
   function toggleModal() {
     refs.modal.classList.toggle('backdrop--is-hidden');
+
+    const isMenuOpen = refs.modal.classList.contains('backdrop--is-hidden');
+
+    const scrollLockMethod = !isMenuOpen
+      ? 'disableBodyScroll'
+      : 'enableBodyScroll';
+    bodyScrollLock[scrollLockMethod](document.body);
   }
 })();
