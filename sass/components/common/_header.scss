@@ -197,14 +197,28 @@
   }
 
   &__icon--mail {
-    @media screen and (min-width: 467px) {
+    @media screen and (min-width: 768px) {
+      width: 14px;
+      height: 10px;
+    }
+  }
+
+  &__icon--phone-book {
+    @media screen and (min-width: 768px) {
+      width: 10px;
+      height: 14px;
+    }
+  }
+
+  &__icon--mail {
+    @media screen and (min-width: 1200px) {
       width: 16px;
       height: 12px;
     }
   }
 
   &__icon--phone-book {
-    @media screen and (min-width: 467px) {
+    @media screen and (min-width: 1200px) {
       width: 10px;
       height: 16px;
     }

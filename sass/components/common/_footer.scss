@@ -15,6 +15,9 @@
   }
   &__contacts-thumb {
     margin-bottom: 60px;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
 
     @media screen and (max-width: 767px) {
       text-align: center;
@@ -73,9 +76,6 @@
 //************************
 
 .footer-socials {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
-  }
   @media screen and (min-width: 1200px) {
     margin-left: 70px;
   }

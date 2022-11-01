@@ -20,6 +20,8 @@
   }
 
   &__thumb {
+    max-width: 480px;
+    margin: 0 auto;
     position: relative;
     height: 100%;
     padding: 120px 15px;
@@ -56,12 +58,6 @@
     &:hover,
     &:focus {
       color: map-get($colors, 'main-decor-color');
-    }
-  }
-
-  &__icon {
-    @media screen and (max-width: 767px) {
-      fill: currentColor;
     }
   }
 }
@@ -134,7 +130,16 @@
 
   &__link {
     color: map-get($colors, 'primary-text-color');
-    font-weight: 500;
+
+    &--accent {
+      font-size: 26px;
+
+      @media screen and (min-width: 480px) {
+        font-size: 34px;
+      }
+      line-height: 1.17;
+      color: map-get($colors, 'main-decor-color');
+    }
   }
 
   &__link:hover,
@@ -161,19 +166,16 @@
   &__link {
     display: inline-block;
     font-weight: 500;
-  }
-
-  &__link {
     font-size: 14px;
     line-height: 1.22;
-    color: map-get($colors, 'primary-text-color');
+    color: map-get($colors, 'main-decor-color');
 
     letter-spacing: 0.02em;
     padding: 0 10px;
 
     &:hover,
     &:focus {
-      color: map-get($colors, 'main-decor-color');
+      color: map-get($colors, 'secondary-decor-color');
     }
   }
 
